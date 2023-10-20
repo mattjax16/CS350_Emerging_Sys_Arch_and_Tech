@@ -1,0 +1,6 @@
+2023/10/19-02:33:07.972 2e07 Reusing MANIFEST /Users/matthewbass/workspace_v12/.jxbrowser.userdata/Default/Local Storage/leveldb/MANIFEST-000001
+2023/10/19-02:33:07.973 2e07 Recovering log #4
+2023/10/19-02:33:07.975 2e07 Reusing old log /Users/matthewbass/workspace_v12/.jxbrowser.userdata/Default/Local Storage/leveldb/000004.log 
+2023/10/19-02:34:11.281 2e07 Level-0 table #8: started
+2023/10/19-02:34:11.288 2e07 Level-0 table #8: 32271 bytes OK
+2023/10/19-02:34:11.299 2e07 Delete type=0 #4

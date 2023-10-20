@@ -1,0 +1,130 @@
+
+**** Build of configuration MCU+Image for project uart2echo_CC3220S_LAUNCHXL_nortos_ticlang ****
+
+/Applications/ti/ccs1230/ccs/utils/bin/gmake -k -j 7 all -O 
+ 
+Building file: "../uart2echo.c"
+Invoking: Arm Compiler
+"/Applications/ti/ccs1230/ccs/tools/compiler/ti-cgt-armllvm_2.1.3.LTS/bin/tiarmclang" -c -mcpu=cortex-m4 -mfloat-abi=soft -mfpu=none -mlittle-endian -mthumb -Oz -I"/Users/matthewbass/workspace_v12/uart2echo_CC3220S_LAUNCHXL_nortos_ticlang" -I"/Users/matthewbass/workspace_v12/uart2echo_CC3220S_LAUNCHXL_nortos_ticlang/MCU+Image" -I"/Users/matthewbass/ti/simplelink_cc32xx_sdk_7_10_00_13/source" -I"/Users/matthewbass/ti/simplelink_cc32xx_sdk_7_10_00_13/kernel/nortos" -I"/Users/matthewbass/ti/simplelink_cc32xx_sdk_7_10_00_13/kernel/nortos/posix" -DDeviceFamily_CC3220 -DNORTOS_SUPPORT -gdwarf-3 -march=armv7e-m -MMD -MP -MF"uart2echo.d_raw" -MT"uart2echo.o" -I"/Users/matthewbass/workspace_v12/uart2echo_CC3220S_LAUNCHXL_nortos_ticlang/MCU+Image/syscfg"   -o"uart2echo.o" "../uart2echo.c"
+subdir_rules.mk:7: recipe for target 'uart2echo.o' failed
+../uart2echo.c:53:81: error: expected ';' after enum
+    enum States {Start_State, Wait_State, ON_state, N_State, F_State, OFF_State}
+                                                                                ^
+                                                                                ;
+../uart2echo.c:116:25: error: use of undeclared identifier 'O_state'; did you mean 'ON_state'?
+                state = O_state;
+                        ^~~~~~~
+                        ON_state
+../uart2echo.c:53:43: note: 'ON_state' declared here
+    enum States {Start_State, Wait_State, ON_state, N_State, F_State, OFF_State}
+                                          ^
+../uart2echo.c:123:14: error: use of undeclared identifier 'O_State'
+        case O_State:
+             ^
+../uart2echo.c:130:25: error: use of undeclared identifier 'F_state'; did you mean 'F_State'?
+                state = F_state;
+                        ^~~~~~~
+                        F_State
+../uart2echo.c:53:62: note: 'F_State' declared here
+    enum States {Start_State, Wait_State, ON_state, N_State, F_State, OFF_State}
+                                                             ^
+../uart2echo.c:140:14: error: use of undeclared identifier 'F_state'; did you mean 'F_State'?
+        case F_state:
+             ^~~~~~~
+             F_State
+../uart2echo.c:53:62: note: 'F_State' declared here
+    enum States {Start_State, Wait_State, ON_state, N_State, F_State, OFF_State}
+                                                             ^
+../uart2echo.c:141:13: error: expected expression
+            else if (input == 'F')
+            ^
+../uart2echo.c:167:14: error: use of undeclared identifier 'O_state'; did you mean 'ON_state'?
+        case O_state:
+             ^~~~~~~
+             ON_state
+../uart2echo.c:53:43: note: 'ON_state' declared here
+    enum States {Start_State, Wait_State, ON_state, N_State, F_State, OFF_State}
+                                          ^
+../uart2echo.c:172:14: error: use of undeclared identifier 'F_state'; did you mean 'F_State'?
+        case F_state:
+             ^~~~~~~
+             F_State
+../uart2echo.c:53:62: note: 'F_State' declared here
+    enum States {Start_State, Wait_State, ON_state, N_State, F_State, OFF_State}
+                                                             ^
+../uart2echo.c:169:14: error: duplicate case value 'ON_state'
+        case ON_state:
+             ^
+../uart2echo.c:167:14: note: previous case defined here
+        case O_state:
+             ^
+9 errors generated.
+gmake: *** [uart2echo.o] Error 1
+../gpiointerrupt.c:65:1: error: must use 'enum' tag to refer to type 'machine_state'
+machine_state current_state = S;
+^
+enum 
+../gpiointerrupt.c:66:1: error: must use 'enum' tag to refer to type 'machine_state'
+machine_state previous_state;
+^
+enum 
+../gpiointerrupt.c:156:14: error: expected expression
+        case default:
+             ^
+../gpiointerrupt.c:165:20: error: use of undeclared identifier 'CONFIG_GPIO_LED_1'
+        GPIO_write(CONFIG_GPIO_LED_1, CONFIG_GPIO_LED_OFF);
+                   ^
+../gpiointerrupt.c:173:20: error: use of undeclared identifier 'CONFIG_GPIO_LED_1'
+        GPIO_write(CONFIG_GPIO_LED_1, CONFIG_GPIO_LED_ON);
+                   ^
+../gpiointerrupt.c:183:20: error: use of undeclared identifier 'CONFIG_GPIO_LED_1'
+        GPIO_write(CONFIG_GPIO_LED_1, CONFIG_GPIO_LED_OFF);
+                   ^
+../gpiointerrupt.c:193:20: error: use of undeclared identifier 'CONFIG_GPIO_LED_1'
+        GPIO_write(CONFIG_GPIO_LED_1, CONFIG_GPIO_LED_OFF);
+                   ^
+../gpiointerrupt.c:202:20: error: use of undeclared identifier 'CONFIG_GPIO_LED_1'
+        GPIO_write(CONFIG_GPIO_LED_1, CONFIG_GPIO_LED_OFF);
+                   ^
+../gpiointerrupt.c:211:20: error: use of undeclared identifier 'CONFIG_GPIO_LED_1'
+        GPIO_write(CONFIG_GPIO_LED_1, CONFIG_GPIO_LED_OFF);
+                   ^
+../gpiointerrupt.c:234:25: error: use of undeclared identifier 'CONFIG_TIMER_0'
+    timer0 = Timer_open(CONFIG_TIMER_0, &params);
+                        ^
+../gpiointerrupt.c:281:20: error: use of undeclared identifier 'CONFIG_GPIO_LED_1'
+    GPIO_setConfig(CONFIG_GPIO_LED_1, GPIO_CFG_OUT_STD | GPIO_CFG_OUT_LOW);
+                   ^
+../gpiointerrupt.c:282:20: error: use of undeclared identifier 'CONFIG_GPIO_BUTTON_0'
+    GPIO_setConfig(CONFIG_GPIO_BUTTON_0, GPIO_CFG_IN_PU | GPIO_CFG_IN_INT_FALLING);
+                   ^
+../gpiointerrupt.c:288:22: error: use of undeclared identifier 'CONFIG_GPIO_BUTTON_0'
+    GPIO_setCallback(CONFIG_GPIO_BUTTON_0, gpioButtonFxn0);
+                     ^
+../gpiointerrupt.c:291:20: error: use of undeclared identifier 'CONFIG_GPIO_BUTTON_0'
+    GPIO_enableInt(CONFIG_GPIO_BUTTON_0);
+                   ^
+../gpiointerrupt.c:297:9: error: use of undeclared identifier 'CONFIG_GPIO_BUTTON_0'
+    if (CONFIG_GPIO_BUTTON_0 != CONFIG_GPIO_BUTTON_1)
+        ^
+../gpiointerrupt.c:297:33: error: use of undeclared identifier 'CONFIG_GPIO_BUTTON_1'
+    if (CONFIG_GPIO_BUTTON_0 != CONFIG_GPIO_BUTTON_1)
+                                ^
+../gpiointerrupt.c:300:24: error: use of undeclared identifier 'CONFIG_GPIO_BUTTON_1'
+        GPIO_setConfig(CONFIG_GPIO_BUTTON_1, GPIO_CFG_IN_PU | GPIO_CFG_IN_INT_FALLING);
+                       ^
+../gpiointerrupt.c:303:26: error: use of undeclared identifier 'CONFIG_GPIO_BUTTON_1'
+        GPIO_setCallback(CONFIG_GPIO_BUTTON_1, gpioButtonFxn1);
+                         ^
+../gpiointerrupt.c:304:24: error: use of undeclared identifier 'CONFIG_GPIO_BUTTON_1'
+        GPIO_enableInt(CONFIG_GPIO_BUTTON_1);
+                       ^
+19 errors generated.
+gmake: *** [gpiointerrupt.o] Error 1
+Building file: "../gpiointerrupt.c"
+Invoking: Arm Compiler
+"/Applications/ti/ccs1230/ccs/tools/compiler/ti-cgt-armllvm_2.1.3.LTS/bin/tiarmclang" -c -mcpu=cortex-m4 -mfloat-abi=soft -mfpu=none -mlittle-endian -mthumb -Oz -I"/Users/matthewbass/workspace_v12/uart2echo_CC3220S_LAUNCHXL_nortos_ticlang" -I"/Users/matthewbass/workspace_v12/uart2echo_CC3220S_LAUNCHXL_nortos_ticlang/MCU+Image" -I"/Users/matthewbass/ti/simplelink_cc32xx_sdk_7_10_00_13/source" -I"/Users/matthewbass/ti/simplelink_cc32xx_sdk_7_10_00_13/kernel/nortos" -I"/Users/matthewbass/ti/simplelink_cc32xx_sdk_7_10_00_13/kernel/nortos/posix" -DDeviceFamily_CC3220 -DNORTOS_SUPPORT -gdwarf-3 -march=armv7e-m -MMD -MP -MF"gpiointerrupt.d_raw" -MT"gpiointerrupt.o" -I"/Users/matthewbass/workspace_v12/uart2echo_CC3220S_LAUNCHXL_nortos_ticlang/MCU+Image/syscfg"   -o"gpiointerrupt.o" "../gpiointerrupt.c"
+subdir_rules.mk:7: recipe for target 'gpiointerrupt.o' failed
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
